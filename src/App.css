@@ -1,0 +1,557 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f7f9fa;
+    color: #1c1d1f;
+}
+.udemy-home {
+    min-height: 100vh;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    color: #5624d0;
+    margin: 0;
+}
+.search-input {
+    padding: 10px 16px 10px 45px; 
+    border: 1px solid #ccc;
+    border-radius: 9999px;
+    font-size: 14px;
+    background-color: #f7f9fa;
+}
+.search-input:focus {
+    border-color: #5624d0;
+    background-color: white;
+    box-shadow: 0 0 0 1px #5624d0;
+    outline: none;
+}
+.navbar-center {
+    position: relative;
+    padding-left: 10px;
+}
+.nav-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+.nav-btn:hover:not(.login):not(.signup) {
+    background-color: #f7f9fa;
+}
+.login {
+    border: 1px solid #1c1d1f;
+}
+.login:hover {
+    background-color: #f7f9fa;
+}
+.signup {
+    background-color: #1c1d1f;
+    color: white;
+}
+.signup:hover {
+    background-color: #000000;
+}
+.hero {
+    position: relative;
+    max-width: 85%;
+    margin: 0 auto;
+    height: 450px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.hero-illustration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.hero-illustration img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-content {
+    position: relative;
+    z-index: 20;
+    background-color: white;
+    padding: 32px;
+    max-width: 400px;
+    margin-left: 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+.hero-content h2 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+.hero-content p {
+    font-size: 19px;
+    margin-bottom: 16px;
+}
+.cta-btn {
+    background-color: #1c1d1f;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+.cta-btn:hover {
+    background-color: #000000;
+}
+.categories-section {
+    padding: 60px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.categories-intro-content {
+    flex: 0 0 300px;
+}
+
+.categories-intro-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #1c1d1f;
+}
+
+.categories-intro-content p {
+    font-size: 19px;
+    line-height: 1.4;
+    color: #6a6f73;
+    margin-top: 10px;
+}
+
+.categories-carousel {
+    flex-grow: 1; 
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0 50px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 20px;
+    scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.category-card-v2 {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid #d1d7dc;
+}
+
+.category-card-v2:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+.card-image-wrapper {
+    height: 180px;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #f7f9fa;
+}
+
+.card-image-v2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content-v2 {
+    padding: 16px 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100px;
+}
+
+.student-badge {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background-color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 13px;
+    font-weight: 600;
+    color: #6a6f73;
+    display: flex;
+    align-items: center;
+}
+.student-badge svg {
+    color: #5624d0;
+}
+
+.card-title-v2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 10px 0 0;
+    color: #1c1d1f;
+}
+
+.card-arrow-v2 {
+    align-self: flex-end;
+    margin-top: auto;
+    font-size: 24px;
+    color: #5624d0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.carousel-nav-v2 {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-arrow-v2 {
+    background-color: white;
+    border: 1px solid #d1d7dc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #5624d0;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-arrow-v2:hover {
+    background-color: #f7f9fa;
+}
+
+.dots-v2 {
+    display: flex;
+    gap: 6px;
+}
+
+.dot-v2 {
+    width: 8px;
+    height: 8px;
+    background-color: #d1d7dc;
+    border-radius: 50%;
+}
+
+.dot-v2.active {
+    background-color: #a435f0;
+}
+
+.reimagine-career {
+    padding: 80px 32px;
+    background-color: #1c1d1f;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 8px;
+    min-height: 400px;
+}
+.reimagine-content {
+    max-width: 500px;
+}
+.reimagine-content h2 {
+    font-size: 36px;
+}
+.cta-btn-secondary {
+    background-color: #5624d0;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+.cta-btn-secondary:hover {
+    background-color: #441c9a;
+}
+.reimagine-illustration {
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.reimagine-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-courses {
+    padding: 60px 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.course-tabs {
+    border-bottom: 1px solid #d1d7dc;
+    display: flex;
+    gap: 32px;
+    padding-bottom: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+.course-tabs::-webkit-scrollbar {
+    display: none;
+}
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6a6f73;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+}
+.tab-btn:hover {
+    color: #1c1d1f;
+}
+.active-tab {
+    color: #1c1d1f;
+}
+.active-tab::after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #1c1d1f;
+}
+.courses-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    gap: 24px;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+}
+.courses-grid::-webkit-scrollbar {
+    display: none;
+}
+.course-card {
+    flex: 0 0 calc(25% - 18px);
+    min-width: 250px;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+}
+.course-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.course-card img {
+    height: 140px;
+    width: 100%;
+    object-fit: cover;
+}
+.course-info {
+    padding: 12px;
+}
+.badge {
+    display: inline-block;
+    background-color: #e4e6eb;
+    color: #1c1d1f;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+.trusted-companies {
+    background-color: #f0f0f5; 
+    
+    padding: 40px 32px;
+    text-align: center;
+    margin: 40px auto;
+}
+.logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px; 
+    margin-top: 30px;
+}
+
+.logo-image {
+    max-height: 40px; 
+    max-width: 120px; 
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.5; 
+    filter: grayscale(100%); 
+    transition: opacity 0.3s;
+}
+
+.logo-image:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+    .navbar-center {
+        display: none;
+    }
+    .navbar-right .nav-btn:not(.login):not(.signup) {
+        display: none;
+    }
+    .hero {
+        height: 220px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-width: 100%;
+        margin: 0;
+    }
+    .hero-content {
+        width: calc(100% - 64px);
+        max-width: none;
+        margin-left: 32px;
+        margin-top: 32px;
+        padding: 24px;
+    }
+    .hero-content h2 {
+        font-size: 24px;
+    }
+    .reimagine-career {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 32px;
+    }
+    .reimagine-illustration {
+        margin-top: 30px;
+    }
+    .courses-grid {
+        flex: 0 0 calc(33.33% - 16px);
+        min-width: 200px;
+    }
+    .categories-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .categories-intro-content {
+        flex: 0 0 auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .categories-carousel {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .carousel-nav-v2 {
+        right: 0;
+    }
+}
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 16px;
+    }
+    .navbar-center {
+        display: none;
+    }
+    .navbar-right .nav-btn:not(.login):not(.signup) {
+        display: none;
+    }
+    .hero {
+        padding: 0;
+        height: 200px;
+    }
+    .hero-content {
+        margin: 16px;
+        padding: 16px;
+        max-width: none;
+        width: auto;
+    }
+    .hero-content h2 {
+        font-size: 24px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .featured-courses, .categories-section, .trusted-companies {
+        padding: 30px 16px;
+    }
+    .featured-courses h2, .categories-intro-content h2 {
+        font-size: 24px;
+    }
+    .categories-section {
+        padding: 30px 16px;
+    }
+    .category-card-v2 {
+        flex: 0 0 280px;
+    }
+    .logos {
+        gap: 20px;
+    }
+    .logo-image {
+        max-height: 30px;
+        max-width: 100px;
+    }
+}
